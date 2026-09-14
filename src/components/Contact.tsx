@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, ArrowUpRight, Copy, Check } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight, Copy, Check, FileText, Download } from "lucide-react";
 import { GithubIcon } from "./TechIcons";
 import { useApp } from "@/context/AppContext";
 
 export default function Contact() {
-  const { t } = useApp();
+  const { t, language } = useApp();
   const [copiedKey, setCopiedKey] = useState<string | null>(null);
 
   const handleCopy = (text: string, key: string, e: React.MouseEvent) => {
@@ -48,6 +48,15 @@ export default function Contact() {
       copyValue: t.contactInfo.location,
       isExternal: true,
     },
+    {
+      key: "cv",
+      icon: <FileText size={22} />,
+      label: language === "vi" ? "Tải xuống Hồ Sơ CV (PDF)" : "Download Resume CV (PDF)",
+      href: "/cv.pdf",
+      copyValue: "https://nguyenquanghuy-portfolio.vercel.app/cv.pdf",
+      isExternal: true,
+      download: "Nguyen_Quang_Huy_Full_Stack_Developer_CV.pdf",
+    },
   ];
 
   return (
@@ -66,6 +75,7 @@ export default function Contact() {
                 href={item.href}
                 target={item.isExternal ? "_blank" : undefined}
                 rel={item.isExternal ? "noopener noreferrer" : undefined}
+                download={"download" in item ? (item.download as string) : undefined}
                 className="contact-pill-link"
                 aria-label={item.label}
               >
