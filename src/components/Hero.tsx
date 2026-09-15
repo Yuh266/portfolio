@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowRight, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./TechIcons";
+import { GithubIcon, ZaloIcon } from "./TechIcons";
 import { useApp } from "@/context/AppContext";
 
 export default function Hero() {
@@ -61,14 +61,14 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://linkedin.com"
+            href={t.contactInfo.zaloUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon-clean"
-            aria-label="LinkedIn Profile"
-            title="LinkedIn"
+            aria-label="Zalo Profile"
+            title={`Zalo: ${t.contactInfo.zalo}`}
           >
-            <LinkedinIcon />
+            <ZaloIcon />
           </a>
 
           <a

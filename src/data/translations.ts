@@ -14,6 +14,8 @@ export interface Translations {
     name: string;
     title: string;
     phone: string;
+    zalo: string;
+    zaloUrl: string;
     email: string;
     github: string;
     githubUrl: string;
@@ -143,6 +145,8 @@ export const translations: Record<Language, Translations> = {
       name: "Nguyễn Quang Huy",
       title: "Full-Stack Developer",
       phone: "0971424792",
+      zalo: "0971424792",
+      zaloUrl: "https://zalo.me/0971424792",
       email: "nhuy04625@gmail.com",
       github: "Yuh266",
       githubUrl: "https://github.com/Yuh266",
@@ -333,6 +337,8 @@ export const translations: Record<Language, Translations> = {
       name: "Nguyễn Quang Huy",
       title: "Full-Stack Developer",
       phone: "0971424792",
+      zalo: "0971424792",
+      zaloUrl: "https://zalo.me/0971424792",
       email: "nhuy04625@gmail.com",
       github: "Yuh266",
       githubUrl: "https://github.com/Yuh266",

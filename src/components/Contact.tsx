@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, ArrowUpRight, Copy, Check, FileText, Download } from "lucide-react";
-import { GithubIcon } from "./TechIcons";
+import { Mail, Phone, MapPin, ArrowUpRight, Copy, Check, FileText } from "lucide-react";
+import { GithubIcon, ZaloIcon } from "./TechIcons";
 import { useApp } from "@/context/AppContext";
 
 export default function Contact() {
@@ -31,6 +31,14 @@ export default function Contact() {
       label: t.contactInfo.phone,
       href: `tel:${t.contactInfo.phone}`,
       copyValue: t.contactInfo.phone,
+    },
+    {
+      key: "zalo",
+      icon: <ZaloIcon />,
+      label: `Zalo (${t.contactInfo.zalo})`,
+      href: t.contactInfo.zaloUrl,
+      copyValue: t.contactInfo.zaloUrl,
+      isExternal: true,
     },
     {
       key: "github",

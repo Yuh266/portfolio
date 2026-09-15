@@ -2,7 +2,7 @@
 
 import React from "react";
 import { ArrowUp, Mail, Phone, MapPin } from "lucide-react";
-import { GithubIcon } from "./TechIcons";
+import { GithubIcon, ZaloIcon } from "./TechIcons";
 import { useApp } from "@/context/AppContext";
 
 export default function Footer() {
@@ -61,6 +61,16 @@ export default function Footer() {
               title={`GitHub: ${t.contactInfo.github}`}
             >
               <GithubIcon />
+            </a>
+            <a
+              href={t.contactInfo.zaloUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social-icon"
+              aria-label="Zalo"
+              title={`Zalo: ${t.contactInfo.zalo}`}
+            >
+              <ZaloIcon />
             </a>
             <a
               href={`mailto:${t.contactInfo.email}`}
