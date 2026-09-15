@@ -13,7 +13,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contact" className="footer">
+    <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
           <a href="#home" className="footer-logo-brand" aria-label="NguyenQuangHuy.dev">
@@ -40,10 +40,10 @@ export default function Footer() {
             <a href="#experience">{t.nav.experience}</a>
           </li>
           <li className="footer-link">
-            <a href="#projects">{t.nav.projects}</a>
+            <a href="#skills">{t.nav.skills}</a>
           </li>
           <li className="footer-link">
-            <a href="#skills">{t.nav.skills}</a>
+            <a href="#projects">{t.nav.projects}</a>
           </li>
           <li className="footer-link">
             <a href="#contact">{t.nav.contact}</a>

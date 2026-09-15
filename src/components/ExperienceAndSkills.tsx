@@ -40,10 +40,10 @@ export default function ExperienceAndSkills() {
   const { t } = useApp();
 
   return (
-    <section id="experience" className="exp-skills-section">
+    <section className="exp-skills-section">
       <div className="container exp-skills-grid">
         {/* Left Column: Work Experience */}
-        <div>
+        <div id="experience">
           <span className="section-tag">{t.experience.tag}</span>
           <h2 className="section-title">{t.experience.title}</h2>
 
