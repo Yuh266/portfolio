@@ -30,6 +30,14 @@ export const metadata: Metadata = {
     "AI Integration",
     "Portfolio",
   ],
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
   authors: [{ name: "Nguyễn Quang Huy" }],
 };
 
