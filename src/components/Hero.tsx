@@ -19,10 +19,16 @@ export default function Hero() {
           fill
           priority
           sizes="(max-width: 1024px) 100vw, 68vw"
-          className="hero-backdrop-img"
+          className="hero-backdrop-img hero-img-light"
         />
-        {/* Soft edge blend gradient */}
-        <div className="hero-backdrop-gradient" />
+        <Image
+          src="/images/hero-desk-dark.jpg"
+          alt="Nguyễn Quang Huy - Full-Stack Developer Dark Workspace"
+          fill
+          priority
+          sizes="(max-width: 1024px) 100vw, 68vw"
+          className="hero-backdrop-img hero-img-dark"
+        />
       </div>
 
       {/* Foreground Left Content */}

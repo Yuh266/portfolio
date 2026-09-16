@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { AppProvider } from "@/context/AppContext";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -49,7 +50,10 @@ export default function RootLayout({
   return (
     <html lang="vi" className={jakarta.variable} suppressHydrationWarning>
       <body suppressHydrationWarning>
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          <AnimatedBackground />
+          {children}
+        </AppProvider>
       </body>
     </html>
   );
